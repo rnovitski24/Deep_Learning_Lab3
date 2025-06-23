@@ -92,12 +92,37 @@ python main.py --model cnn --epochs 10 --batch-size 64 --lr 0.001
 
 ## Experiments & Results
 
-| Model | Test Accuracy | Notes        |
-|-------|---------------|--------------|
-| CNN   | xx.xx%        | ...          |
-| MLP   | xx.xx%        | ...          |
+### **CNN — Test Accuracy/Notes**
 
-*Fill in with your results and observations.*
+- **Test Accuracy:**  
+  - Best CNN (kernel size 3, 32 filters): **92.77%**
+  - With batch normalization (no dropout): **92.72%**
+  - With dropout (no batch normalization): **91.96%**
+  - Varying kernel sizes: smaller kernels (size 3) performed best; accuracy declined with larger kernels (size 9: 90.74%).
+  - Varying filters: more filters improved accuracy up to a point (25 filters: 92.15%), but gains diminish with higher counts.
+- **Training Time:**  
+  - Significantly longer than MLP (CNN: ~1826s vs. MLP: ~158s on Colab), though times were inconsistent due to hardware limitations.
+- **Notes:**  
+  - CNNs outperformed MLPs in accuracy due to better spatial feature extraction, but require more time and resources.
+  - Batch normalization was slightly more effective than dropout for this dataset.
+  - Optimal accuracy was achieved using smaller kernels and a moderate number of filters.
+  - Careful tuning of architecture and regularization is key for best results.
+
+---
+
+### **MLP — Test Accuracy/Notes**
+
+- **Test Accuracy:**  
+  - 2-layer MLP (input 1000): **87.69%**
+- **Training Time:**  
+  - **~158 seconds** (much faster than CNN under same conditions)
+- **Notes:**  
+  - MLPs train faster and are computationally efficient, but perform worse on image data compared to CNNs.
+  - Best for tasks where speed is prioritized over maximum accuracy.
+
+---
+
+You can copy these points directly into your README or results table. Let me know if you’d like the summary further condensed or formatted differently!
 
 ---
 
