@@ -122,10 +122,6 @@ python main.py --model cnn --epochs 10 --batch-size 64 --lr 0.001
 
 ---
 
-You can copy these points directly into your README or results table. Let me know if you’d like the summary further condensed or formatted differently!
-
----
-
 ## Requirements
 
 - Python 3.8+
@@ -152,5 +148,3 @@ pip install -r requirements.txt
 [MIT License](LICENSE)
 
 ---
-
-Let me know if you want help filling in specific sections, adding badges, or customizing for your exact project structure!
